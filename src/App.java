@@ -59,7 +59,7 @@ public class App {
 
         Scanner scanner = new Scanner(System.in);
 
-        while (true) {
+        loop: while (true) {
             System.out.println("\n");
             System.out.println("1 - Aumentar volume");
             System.out.println("2 - Diminuir volume");
@@ -71,23 +71,17 @@ public class App {
 
             int op = scanner.nextInt();
 
-            if (op == 1) {
-                controleRemoto.mudarVolumes("aumentar");
-            } else if (op == 2) {
-                controleRemoto.mudarVolumes("diminuir");
-            } else if (op == 3) {
-                controleRemoto.mudarCanais("proximo");
-            } else if (op == 4) {
-                controleRemoto.mudarCanais("anterior");
-            } else if (op == 5) {
-                controleRemoto.mostrarInformacoesTVs(false);
-            } else if (op == 6) {
-                controleRemoto.mostrarInformacoesTVs(true);
-            } else if (op == 0) {
-                System.out.println("Saindo...");
-                break;
-            } else {
-
+            switch (op) {
+                case 1 -> controleRemoto.mudarVolumes("aumentar");
+                case 2 -> controleRemoto.mudarVolumes("diminuir");
+                case 3 -> controleRemoto.mudarCanais("proximo");
+                case 4 -> controleRemoto.mudarCanais("anterior");
+                case 5 -> controleRemoto.mostrarInformacoesTVs(false);
+                case 6 -> controleRemoto.mostrarInformacoesTVs(true);
+                case 0 -> {
+                    System.out.println("Saindo...");
+                    break loop;
+                }
             }
         }
 

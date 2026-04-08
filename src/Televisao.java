@@ -50,8 +50,10 @@ public abstract class Televisao {
     public boolean verificarCanalExistente(Canal canal) {
         // Método simples para identificar.
         // No mundo ideal, deveriamos sobrescrever os métodos equals e hashCode
-        return this.canaisCadastrados.stream().anyMatch(
-                c -> c.getNumero() == canal.getNumero());
+        // return this.canaisCadastrados.stream().anyMatch(
+        // c -> c.getNumero() == canal.getNumero());
+
+        return this.canaisCadastrados.contains(canal);
     }
 
     public void sintonizar(int numeroDoCanal) {

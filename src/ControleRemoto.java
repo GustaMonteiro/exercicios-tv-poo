@@ -8,7 +8,7 @@ public class ControleRemoto {
     }
 
     public boolean adicionarTV(Televisao televisao) {
-        boolean tvJaExiste = this.televisoes.stream().anyMatch(tv -> tv.getId() == televisao.getId());
+        boolean tvJaExiste = this.televisoes.stream().anyMatch(tv -> tv.equals(televisao));
 
         if (!tvJaExiste)
             this.televisoes.add(televisao);

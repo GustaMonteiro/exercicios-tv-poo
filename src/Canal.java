@@ -34,6 +34,19 @@ public class Canal {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        return obj instanceof Canal canal
+                && canal.numero == this.numero
+                && canal.hd == this.hd
+                && canal.nome.equals(this.nome);
+
+    }
+
+    @Override
     public String toString() {
         String nome = this.getNome();
         int numero = this.getNumero();

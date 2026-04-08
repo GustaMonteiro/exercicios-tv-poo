@@ -34,4 +34,32 @@ lib/   → dependências externas
 
 ## Como executar
 
+### VS Code
+
 Abra o projeto no VS Code com a extensão **Extension Pack for Java** instalada e execute a classe `App`.
+
+### Terminal
+
+```bash
+# Compilar
+javac -d bin $(find src -name "*.java")
+
+# Executar
+java -cp bin App
+```
+
+## Comportamento ao executar
+
+O programa inicializa 4 televisores (2 `SmartTV` e 2 `TVHD`) com canais sorteados aleatoriamente e exibe um menu interativo:
+
+```
+1 - Aumentar volume
+2 - Diminuir volume
+3 - Próximo canal
+4 - Voltar canal
+5 - Mostrar informações básicas
+6 - Mostrar informações completas
+0 - Sair
+```
+
+Cada comando é propagado simultaneamente para todos os televisores gerenciados pelo `ControleRemoto`. O volume varia de `0` a `10` e a navegação entre canais é circular.

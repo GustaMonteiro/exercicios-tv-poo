@@ -1,3 +1,5 @@
+package poo.exercicio.tv;
+
 import java.util.ArrayList;
 
 public class SmartTV extends Televisao {

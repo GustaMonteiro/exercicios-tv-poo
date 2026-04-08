@@ -1,3 +1,5 @@
+package poo.exercicio.tv;
+
 import java.util.ArrayList;
 
 public class ControleRemoto {
@@ -13,7 +15,7 @@ public class ControleRemoto {
         if (!tvJaExiste)
             this.televisoes.add(televisao);
 
-        return tvJaExiste;
+        return !tvJaExiste;
     }
 
     public void mudarCanais(String direcao) {

@@ -3,6 +3,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+import poo.exercicio.tv.Canal;
+import poo.exercicio.tv.ControleRemoto;
+import poo.exercicio.tv.SmartTV;
+import poo.exercicio.tv.TVHD;
+
 public class App {
     public static ArrayList<Canal> sortearCanais(List<Canal> canais, int quantidade) {
         List<Canal> copia = new ArrayList<>(canais);

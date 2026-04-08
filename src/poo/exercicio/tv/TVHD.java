@@ -1,3 +1,5 @@
+package poo.exercicio.tv;
+
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 

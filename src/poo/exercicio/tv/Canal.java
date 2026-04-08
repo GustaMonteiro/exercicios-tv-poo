@@ -1,3 +1,5 @@
+package poo.exercicio.tv;
+
 public class Canal {
     private int numero;
     private String nome;
